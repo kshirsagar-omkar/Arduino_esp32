@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestie Date Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Changed font to Arial */
+            text-align: center;
+            margin: 0;
+            background-color: #f9d8d9; /* Baby pink background */
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff6f61; /* Playful color for the heading */
+        }
+
+        .message {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .heart {
+            font-size: 80px;
+            color: #ff6f61; /* Playful color for the heart */
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #ff6f61; /* Playful color for the buttons */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            outline: none; /* Remove button outline */
+        }
+
+        button:hover {
+            background-color: #ff887d; /* Lighter shade on hover for a soft effect */
+        }
+
+        .popup {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border: 1px solid #ff6f61; /* Playful color for the border */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            font-size: 24px;
+            color: #ff6f61; /* Playful color for the popup text */
+            text-align: center;
+        }
+
+        /* Add a smooth fade-in animation for the popup */
+        .popup.fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">&hearts;</div>
+        <div class="message">Bol 31st la kuth jaych</div>
+
+        <div class="buttons">
+            <button id="no-btn">Nahi mahit mala</button>
+            <button id="yes-btn">Tuch sang </button>
+        </div>
+        <div class="popup" id="popup">
+            <p>chal oyo la 😊</p>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("no-btn");
+        const yesButton = document.getElementById("yes-btn");
+        const popup = document.getElementById("popup");
+
+        noButton.addEventListener("mouseover", () => {
+            noButton.style.position = "absolute";
+            noButton.style.left = Math.random() * 80 + "vw";
+            noButton.style.top = Math.random() * 80 + "vh";
+        });
+
+        yesButton.addEventListener("click", () => {
+            popup.style.display = "block";
+        });
+
+        popup.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+        // Hide the popup initially
+        popup.style.display = "none";
+    </script>
+</body>
+</html>
