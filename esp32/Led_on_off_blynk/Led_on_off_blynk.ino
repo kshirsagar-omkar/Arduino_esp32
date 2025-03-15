@@ -28,12 +28,8 @@
 #include <BlynkSimpleEsp32.h>
 
 // WiFi Credentials
-// char ssid[] = "Demo";
-// char pass[] = "12345678";
-
-
-char ssid[] = "Vaibhav";
-char pass[] = "Vaibhav@123";
+char ssid[] = "demo";
+char pass[] = "12345678";
 
 
 
